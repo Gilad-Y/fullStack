@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./Menu.css";
 
 function Menu(): JSX.Element {
@@ -5,9 +6,12 @@ function Menu(): JSX.Element {
         <div className="Menu">
 			main menu
             <hr/>
-            <div className="MenuItems">
+            <NavLink to={"/"}><div className="MenuItems">
+            Home page
+            </div></NavLink>
+            <NavLink to={"/AddCategory"}><div className="MenuItems">
             Category management
-            </div>
+            </div></NavLink>
             <div className="MenuItems">
             add photo
             </div>
