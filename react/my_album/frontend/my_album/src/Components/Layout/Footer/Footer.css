@@ -1,3 +1,9 @@
 .Footer {
-	
+    height: 100%;
+    display: grid;
+	grid-template-columns: 50% 50%;
+    font-family: "Bruno Ace",cursive;
+}
+.Footer>*{
+    border: 1px solid black;
 }
