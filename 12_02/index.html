@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shopping list</title>
+    <link rel="stylesheet" href="css/css.css" />
+    <script src="js/js.js"></script>
+  </head>
+  <body>
+    <form action="javascript:getData()" id="listForm">
+      <input type="text" placeholder="product name" id="name" />
+      <input type="number" placeholder="qty" id="qty" />
+      <input type="number" placeholder="price" id="price" />
+      <input type="text" placeholder="image" id="img" />
+      <input type="reset" />
+      <input type="submit" />
+    </form>
+    <br />
+    <div>
+      <table id="shoppingTable">
+        <thead>
+          shopping list
+          <tr>
+            <th>image</th>
+            <th>product name</th>
+            <th>qty</th>
+            <th>price</th>
+            <th>total price</th>
+          </tr>
+        </thead>
+        <tbody id="res"></tbody>
+      </table>
+    </div>
+  </body>
+</html>

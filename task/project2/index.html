@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cryptonite</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    />
+    <link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/css.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <script src="js/js.js"></script>
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <!-- scroll -->
+ <header id="parallax_main" class="collapsing-parallax">
+<div id="toolbar_main" class="toolbar-collapsing-parallax">
+  <section id="title_main" class="title-collapsing-parallax">
+	 <div class="title-container">
+   <title class="main">Cryptonite</title>
+	  </div>
+  </section>
+  <div class="fab">
+  </div>
+ </header>
+ <main id="#content" class="site-main" role="main">
+	 <section class="inner">
+<!-- <div class="row"> -->
+    <hr />
+    <div class="alert_div"></div>
+    <div id="navBar" class="container">
+        <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group" role="group" aria-label="First group">
+            <button class="btn btn-primary" id="nav_home" onclick="javascript:createCards(cryptoData,keyWord)">Home</button>
+            <button class="btn" id="nav_reports" onclick="javascript:liveReports()">Live Reports</button>
+            <button class="btn" id="nav_about" onclick="javascript:about()">About</button>
+          </div>
+          <div class="input-group row">
+            <div class="input-group-prepend">
+            <input type="text" id="searchBar" placeholder="Search" />
+            <button onclick="search()" class="btn btn-outline-success" >Search</button>
+          </div>
+        </div>    
+          <!--  -->
+         <div id="nav_content" class="row container">
+          </div>
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">please select only five coins</h5>
+        <input type="button" class="btn-close btn" onclick="modalClose()">
+          
+        </button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"  onclick="modalClose()">Close</button>
+        <button type="button" class="btn btn-primary" onclick="saveModal()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>

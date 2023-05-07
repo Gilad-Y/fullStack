@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript HTML5 Task</title>
+    <link rel="stylesheet" href="css/css.css" />
+    <script defer src="js/js.js"></script>
+  </head>
+  <body>
+    <h1>Add Product</h1>
+    <div class="box">
+      <form action="javascript:getData()" id="productForm">
+        <input type="text" placeholder="product name" id="pName" required />
+        <input type="number" placeholder="product price" id="pPrice" required />
+        <select id="reqCategory" required>
+          <option>Drinks</option>
+          <option>Meat</option>
+          <option>Dairy</option>
+          <option>Snacks</option>
+          <option>Basics</option>
+        </select>
+        <input type="text" placeholder="product picture" id="pURL" required />
+        <input type="submit" value="Add Product" />
+        <input type="reset" />
+      </form>
+    </div>
+    <div>
+      <h1>My Cart</h1>
+      <table>
+        <thead>
+          <th>Product name</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Picture</th>
+        </thead>
+        <tbody id="cartTable"></tbody>
+      </table>
+    </div>
+  </body>
+</html>

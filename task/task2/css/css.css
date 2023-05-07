@@ -1,0 +1,34 @@
+form{
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    border: 1px solid black;
+    width: 300px;
+    border-radius: 5px;
+    background-color: rgb(38, 131, 193);
+}
+input{
+    padding: 5px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+body{
+    background-color:rgb(234, 233, 233) ;
+}
+#res{
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+table{
+    text-align: center;
+    margin: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th,tr,td{
+    border: 1px black solid;
+    padding: 10px;
+
+}

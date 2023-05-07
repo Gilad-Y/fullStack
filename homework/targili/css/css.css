@@ -1,0 +1,26 @@
+body{
+    background-color: antiquewhite;
+
+}
+.box{
+    margin: auto;
+    border: 1px black solid;
+    border-radius: 14px;
+    width: 200px;
+    text-align: center;
+    
+}
+form{
+    margin: auto;
+}
+input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 10px;
+
+}
+table{
+    margin: auto;
+    
+}

@@ -1,0 +1,27 @@
+.parallax {
+    /* The image used */
+    background-image: url("../img/banner.png");
+  
+    /* Set a specific height */
+    min-height: 100px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.crypto_info{
+border: 1px solid lightgrey;
+width: 270px;
+border-radius: 3px;
+margin-top: 30px;
+margin-left: 15px;
+padding: 20px;
+}
+.form-check-input{
+    transform: scale(2);
+}
+.collapse{
+    margin-top: 10px;
+}

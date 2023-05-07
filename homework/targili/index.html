@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>line</title>
+    <link rel="stylesheet" href="css/css.css" />
+    <script src="js/js.js"></script>
+  </head>
+  <body>
+    <form id="lineForm" action="javascript:getData()">
+      <div class="box">
+        <input type="text" id="name" placeholder="name" />
+        <input type="submit" />
+        <input type="reset" />
+        <input type="button" value="next number" onclick="nextNumber()" />
+      </div>
+      <br />
+      <div class="box" style="width: 250px">
+        <h1>next number: <span id="nextNumber">free</span></h1>
+      </div>
+      <br />
+      <div class="box">
+        <table>
+          <thead>
+            <tr>
+              <td>place</td>
+              <td>name</td>
+            </tr>
+          </thead>
+          <div class="">
+            <tbody id="tableLine"></tbody>
+          </div>
+        </table>
+      </div>
+    </form>
+  </body>
+</html>

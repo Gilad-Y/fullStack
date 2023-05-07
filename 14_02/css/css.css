@@ -1,0 +1,19 @@
+body{
+    margin-top: 150px;
+    background-color: lightgray;
+}
+#box{
+    margin: auto;
+    border: black solid 1px;
+    border-radius: 16px;
+    text-align: center;
+    width: 350px;
+}
+input{
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+table{
+    margin: auto;
+}

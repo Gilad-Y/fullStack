@@ -1,0 +1,53 @@
+
+.crypto_info {
+  border: 1px solid lightgrey;
+  width: 270px;
+  border-radius: 3px;
+  margin-top: 30px;
+  margin-left: 15px;
+  padding: 20px;
+}
+.form-check-input {
+  transform: scale(2);
+}
+.collapse {
+  margin-top: 10px;
+}
+.progress {
+  height: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  background-color: #007bff;
+  border-radius: 5px;
+}
+.spinner-border {
+  margin: auto;
+  margin-top: 220px;
+  width: 5rem;
+  height: 5rem;
+}
+.btn{
+  text-align: center;
+}
+.nav-link {
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+  max-width: 100%;
+  min-width: 1%;
+}
+#searchBar {
+  padding: 5px;
+}
+#nav_content {
+  margin-top: 20px;
+}
+.alert {
+  text-align: center;
+}
+.btn-group{
+  margin-left: 30px;
+}

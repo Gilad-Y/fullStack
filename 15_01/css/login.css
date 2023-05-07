@@ -1,0 +1,38 @@
+#main{
+    border:1px rgb(161, 161, 161) solid;
+    margin: auto;
+    width: 270px;
+    text-align: center;
+    margin-top: 200px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 20px -14px;
+    }
+    #forgot{
+        color:blue;
+    }
+    .button{
+    border-radius:4%;
+    width:180px;
+    margin: 10px;
+    padding: 15px;
+    }
+    #new{
+        background-color: #42b72a;
+        width: 150px;
+        border-radius: 7px;
+    }
+    .myInput{
+        padding:10px;
+        border-radius: 7px;
+        margin :10px;
+        width: 215px;
+    }
+    body{
+        background-color: whitesmoke;
+    }
+    #login{
+        background: #009fff;
+        width: 240px;
+    }

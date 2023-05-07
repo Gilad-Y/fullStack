@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://127.0.0.1:5500/task/project2/#collapseExample -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptonite</title>
+    <link rel="stylesheet" href="./Cryptonite_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./Cryptonite_files/css.css">
+    <script src="./Cryptonite_files/bootstrap.bundle.min.js"></script>
+    <script src="./Cryptonite_files/jquery.min.js"></script>
+    <script src="./Cryptonite_files/js.js"></script>
+  </head>
+  <body>
+    <div class="parallax">
+    <h1>Cryptonite</h1>
+</div>
+    <hr>
+    <div id="navBar" class="container row">
+          <ul class="nav col nav-pills d-inline-flex container card-header-pills">
+            <li class="nav-item">
+              <a class="nav-link active" id="nav_home" href="javascript:createCards(cryptoData,keyWord)">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="nav_reports" href="javascript:liveReports()">Live Reports</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="nav_about" href="javascript:about()">About</a>
+            </li>
+        </ul>
+        <div class="col float-end">
+            <input type="text" id="searchBar" placeholder="Search">
+            <input type="button" value="Search" onclick="search()" class="btn btn-outline-success">
+          </div>
+        <div id="nav_contan" class="row">
+            <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="form-check position-relative float-end form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+              </div>
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">
+                With supporting text below as a natural lead-in to additional
+                content.
+              </p>
+              <a class="btn btn-primary" data-bs-toggle="collapse getInfo()" href="http://127.0.0.1:5500/task/project2/#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                More Info
+              </a>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+        <!-- <div class="card-body">
+          <p class="card-text">
+            <div id="crypto_cards" class="row "></div>
+        </p>
+        </div> -->
+    <!-- <div class="row">
+      <div class="col d-inline-flex">
+        <input type="button" value="Home" class="btn btn-primary" />
+        <input
+          type="button"
+          value="Live Reports"
+          class="btn btn-link text-decoration-none"
+        />
+        <input
+          type="button"
+          value="About"
+          class="btn btn-link text-decoration-none"
+        />
+      </div>
+      <div class="col d-inline-flex">
+        <input type="text" placeholder="Search" />
+        <input type="button" value="Search" class="btn btn-outline-success" />
+      </div> -->
+
+      <!-- 
+
+
+ -->
+      
+    
+
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

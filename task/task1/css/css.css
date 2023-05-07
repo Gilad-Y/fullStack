@@ -1,0 +1,40 @@
+.box{
+    border: 1px black solid;
+    border-radius: 14px;
+    width: 220px;
+    margin: auto;
+    text-align: center;
+}
+body{
+    text-align: center;
+    background-color: azure;
+}
+table{
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+tr,
+td,
+th {
+  border: 1px solid black;
+  
+}
+td {
+  width: 150px;
+}
+input,select{
+    margin-top: 10px;
+    padding: 7px;
+    margin-bottom: 3px;
+}
+tr:nth-child(odd){
+    background-color: lightgray;
+}
+tr:nth-child(even){
+    background-color: lightgoldenrodyellow;
+}
+th{
+    background-color: aqua;
+    width: 150px;
+}

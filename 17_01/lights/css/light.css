@@ -1,0 +1,48 @@
+.red{
+    width: 50%;
+    height: 100%;
+    background: red;
+    position: fixed;
+    left: 50%;
+    animation: 2s red infinite;
+}
+.blue{
+    width: 50%;
+    height: 100%;
+    background: blue;
+    position: fixed;
+    animation: 2s blue infinite;
+
+}
+@keyframes red{
+0%{
+    opacity: 1;
+}
+50%{
+    opacity: 1;
+}
+51%{
+    opacity: 0.1;
+}
+100%{
+    opacity: 0.1;
+}
+}
+@keyframes blue{
+    0%{
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 0.1;
+    }
+    51%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+body{
+    background: black;
+}
