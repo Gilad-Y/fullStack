@@ -5,9 +5,12 @@ import { Category } from "../../Modal/Category";
 
 function AddCategory(): JSX.Element {
     const [newCategory,setCategory]=useState("");
-    const [category,setCategories]=useState<Category[]>([]);
+    const [categories,setCategories]=useState<Category[]>([]);
     const handleAddButton=()=>{
-
+        let temp = categories;
+        temp.push(new Category(categories.length+1,newCategory));
+        setCategories(temp);
+        localStorage.setItem("categories",JSON.stringify(temp));
     }
     return (
         <div className="AddCategory">
@@ -17,11 +20,11 @@ function AddCategory(): JSX.Element {
                 </Typography>
                 <hr/>
                 <TextField label="category name"variant="outlined"
-                onKeyUp={(args)=>setCategory(args.)}/>
+                onBlur={(args)=>setCategory((args.target as HTMLInputElement).value)}/>
                 <br/>
                 <br/>
                 <ButtonGroup variant="contained" aria-label="outlined primary button group">
-                    <Button color="primary">Add</Button>
+                    <Button color="primary" onClick={handleAddButton}>Add</Button>
                     <Button color="secondary">cancel</Button>
                 </ButtonGroup>
 
