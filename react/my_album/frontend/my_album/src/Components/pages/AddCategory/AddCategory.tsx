@@ -10,7 +10,7 @@ function AddCategory(): JSX.Element {
         let temp = categories;
         temp.push(new Category(categories.length+1,newCategory));
         setCategories(temp);
-        localStorage.setItem("categories",JSON.stringify(temp));
+        localStorage.setItem("Categories",JSON.stringify(temp));
     }
     return (
         <div className="AddCategory">
