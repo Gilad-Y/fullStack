@@ -1,0 +1,20 @@
+.mainLayout {
+    height: 100%;
+    box-sizing: border-box;
+	display: grid;
+
+    grid-template-rows: 10% 85% 5%;
+    grid-template-columns: repeat(6,1fr);
+}
+.mainLayout>header,
+.mainLayout>footer
+{
+    grid-column : span 6;
+}
+.mainLayout>aside{
+    grid-column: span 5;
+}
+.mainLayout,
+.mainLayout>*{
+    border: 1px black solid;
+}
