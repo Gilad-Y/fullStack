@@ -3,7 +3,7 @@ import "./Sum.css";
 function Sum(): JSX.Element {
     return (
         <div className="Sum">
-			sum
+			total number of tasks | 0
         </div>
     );
 }
