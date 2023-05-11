@@ -1,11 +1,18 @@
 import { useForm } from "react-hook-form";
 import "./createTask.css";
 import { Tasks } from "../../modal/taskModal";
+import { store } from "../../redux/store";
+import { addTask } from "../../redux/tasksReducer";
 
 function CreateTask(): JSX.Element {
     const {register,control,handleSubmit}=useForm<Tasks>();
     const onSubmit=(data:Tasks)=>{
+        data.id=store.getState().task.tasks.length+1;
         console.log(data);
+        store.dispatch(addTask(data));
+    }
+    if(!localStorage.getItem("tasks")){
+    localStorage.setItem("tasks",JSON.stringify(store.getState().task.tasks))
     }
     return (
         <div className="createTask">
