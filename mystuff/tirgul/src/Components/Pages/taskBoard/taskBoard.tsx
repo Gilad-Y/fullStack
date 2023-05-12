@@ -20,7 +20,7 @@ function TaskBoard(): JSX.Element {
     
     return (
         <div className="taskBoard">
-			{all_Tasks.length}
+			{/* {all_Tasks.length} */}
         </div>
     );
 }

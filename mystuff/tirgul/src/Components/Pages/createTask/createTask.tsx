@@ -1,8 +1,8 @@
-import { useForm } from "react-hook-form";
 import "./createTask.css";
 import { Tasks } from "../../modal/taskModal";
 import { store } from "../../redux/store";
 import { addTask } from "../../redux/tasksReducer";
+import { useForm } from "react-hook-form";
 
 function CreateTask(): JSX.Element {
     const {register,control,handleSubmit}=useForm<Tasks>();

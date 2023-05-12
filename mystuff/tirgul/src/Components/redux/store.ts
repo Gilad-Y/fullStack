@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 import { TasksReducer } from "./tasksReducer";
-import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 
 const reducers=combineReducers({
     task:TasksReducer,
