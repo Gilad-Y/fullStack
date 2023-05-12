@@ -1,25 +1,9 @@
 .taskBoard {
-	margin: auto;
+    height: 100%;
+    overflow:auto;
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+    /* max-height: 100%; */
 }
-form{
-    background-color: azure;
-    
-    margin: auto;
-    margin-top: 70px;
-    width: 400px;
-    border: 1px solid black;
-    border-radius: 16px;
 
-}
-textarea{
-    border-radius: 16px;
-    height: 150px;
-    width: 300px;
-    text-align: center;
-
-}
-input{
-    padding: 10px;
-    width: 130px;
-    margin-bottom: 10px;
-}
