@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { store } from "../../redux/store";
-import { downloadTask } from "../../redux/tasksReducer";
+import { addTask, downloadTask } from "../../redux/tasksReducer";
 import "./taskBoard.css";
 import { Tasks } from "../../modal/taskModal";
 import SingleTask from "./singleTask/singleTask";
