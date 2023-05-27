@@ -21,3 +21,12 @@ button{
 .taskInfo{
     margin-top: 30px;
 }
+.important{
+    color: orange;
+}
+.urgent{
+color: red;
+}
+.negligible{
+color: green;
+}

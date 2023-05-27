@@ -3,17 +3,22 @@ import { Tasks } from "../../modal/taskModal";
 import { store } from "../../redux/store";
 import { addTask } from "../../redux/tasksReducer";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 function CreateTask(): JSX.Element {
     const {register,control,handleSubmit}=useForm<Tasks>();
     const onSubmit=(data:Tasks)=>{
-        data.id=store.getState().task.tasks.length+1;
+        if( data.type=="chose task importance"){
+            alert("choose another type")
+        }else{
+        axios.
+        post("http://localhost:4000/api/v1/taskboard/addNewTask",data) 
         console.log(data);
         store.dispatch(addTask(data));
-    }
-    if(!localStorage.getItem("tasks")){
-    localStorage.setItem("tasks",JSON.stringify(store.getState().task.tasks))
-    }
+    }}
+    // if(!localStorage.getItem("tasks")){
+    // localStorage.setItem("tasks",JSON.stringify(store.getState().task.tasks))
+    // }
     return (
         <div className="createTask">
 			create task

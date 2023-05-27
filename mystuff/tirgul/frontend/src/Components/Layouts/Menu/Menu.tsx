@@ -6,9 +6,9 @@ function Menu(): JSX.Element {
         <div className="Menu">
 			main menu
             <hr/>
-            <NavLink to={"/"}>task board</NavLink>
+            <NavLink className={"Nav"} to={"/"}>task board</NavLink>
             <br/>
-            <NavLink to={"/addTasks"} >add task</NavLink>
+            <NavLink className={"Nav"} to={"/addTasks"} >add task</NavLink>
         </div>
     );
 }

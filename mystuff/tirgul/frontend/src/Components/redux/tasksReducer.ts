@@ -1,3 +1,4 @@
+import axios from "axios";
 import { Tasks } from "../modal/taskModal";
 
 export class TaskState{
@@ -39,7 +40,6 @@ export const TasksReducer=(
         switch(action.type){
         case TasksActionType.addTask:
             newState.tasks=[...newState.tasks, action.payload]
-            localStorage.setItem("tasks",JSON.stringify(newState.tasks))
             break;
         case TasksActionType.removeTask:
             newState.tasks=[...newState.tasks].filter(
