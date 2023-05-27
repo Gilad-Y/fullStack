@@ -1,9 +1,9 @@
 .taskBoard {
     height: 100%;
     overflow:auto;
-    /* display: flex;
+    display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; */
-    /* max-height: 100%; */
+    flex-wrap: wrap; 
+    max-height: 100%;
 }
 
