@@ -7,17 +7,6 @@ import SingleTask from "./singleTask/singleTask";
 import axios, { all } from "axios";
 function TaskBoard(): JSX.Element {
     const [refresh,setRefresh]=useState(false);
-    // useEffect(()=>{
-    //     if (store.getState().task.tasks.length<1){
-    //         // if(!localStorage.getItem("tasks")){
-    //         //     localStorage.setItem("tasks","")
-    //         // }
-    //    store.dispatch(
-    //             downloadTask(JSON.parse(localStorage.getItem("tasks")as any))
-    //         )
-    //         setRefresh(!refresh);
-    //     }
-    // },[])
     useEffect(()=>{
         axios.get 
         ("http://localhost:4000/api/v1/taskboard/getAllTasks") 

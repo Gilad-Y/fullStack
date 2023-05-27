@@ -3,6 +3,7 @@ import background from '../../../../img/notebg.png';
 import { Button, IconButton } from "@mui/material";
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import { type } from "os";
+import { useNavigate } from "react-router";
 
 interface itemProps{
     id:number;
@@ -11,6 +12,7 @@ interface itemProps{
     onDeleteTask:(id: number) => void;
 }
 function SingleTask(props:itemProps): JSX.Element {
+    const navigate=useNavigate();
     const handleDeleteTask=(id:number)=>{
         props.onDeleteTask(id)
     }
@@ -31,6 +33,7 @@ function SingleTask(props:itemProps): JSX.Element {
     }
     const handleDoubleClick=(id:number)=>{
         console.log(id)
+        navigate(`/updateTask/${id}`)
     }
     return (
         <div className="singleTask box" style={{backgroundImage:`url(${background})`}}>
@@ -43,7 +46,7 @@ function SingleTask(props:itemProps): JSX.Element {
 </IconButton>
 <br/>
 <div className="taskInfo"
- onDoubleClick={()=>handleDoubleClick(props.id)} >
+ onDoubleClick={()=>handleDoubleClick(+props.id)} >
 			{props.content}
             <br/>
             <div className={type}>
@@ -58,4 +61,8 @@ function SingleTask(props:itemProps): JSX.Element {
 export default SingleTask;
 
 
-//UPDATE `taskBoard`.`taskTable` SET `content` = 'i didit ?' WHERE (`id` = '23');
+
+function setInputValue(content: string) {
+    throw new Error("Function not implemented.");
+}
+

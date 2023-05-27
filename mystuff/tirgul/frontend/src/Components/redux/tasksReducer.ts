@@ -9,6 +9,7 @@ export enum TasksActionType{
     addTask="addTask",
     removeTask="removeTask",
     downloadTasks="downloadTasks",
+    updateTask="updateTask",
 }
 export interface TasksAction{
     type:TasksActionType;
@@ -33,6 +34,12 @@ export function downloadTask(tasks:Tasks[]):TasksAction{
         payload:tasks,
     }
 }
+export function updateTask(updatedTask:Tasks):TasksAction{
+    return{
+        type:TasksActionType.updateTask,
+        payload:updatedTask,
+    }
+}
 export const TasksReducer=(
     currentState:TaskState=new TaskState(),
     action:TasksAction):TaskState=>{
@@ -43,12 +50,13 @@ export const TasksReducer=(
             break;
         case TasksActionType.removeTask:
             newState.tasks=[...newState.tasks].filter(
-            (item)=>item.id != action.payload
-            )
-            localStorage.setItem("tasks",JSON.stringify(newState.tasks))
+            (item)=>item.id != action.payload)            
             break;
         case TasksActionType.downloadTasks:
             newState.tasks=action.payload;
+            break;
+            case TasksActionType.updateTask:
+                newState.tasks=[...newState.tasks]
             break;
     }
     return newState;
