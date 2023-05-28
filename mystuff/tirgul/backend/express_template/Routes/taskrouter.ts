@@ -1,5 +1,5 @@
 import express, { NextFunction, Response, Request, request } from "express";
-import { addNewTask, deleteTask, getAllTasks } from "../Logic/TaskLogic";
+import { addNewTask, deleteTask, getAllTasks, getTaskById, updateTask } from "../Logic/TaskLogic";
 const taskRouter =express.Router();
 
 taskRouter.get(
@@ -21,9 +21,26 @@ taskRouter.get(
   taskRouter.delete(
     "/deleteTask/:id",
     async(request:Request,response:Response,next:NextFunction)=>{
-        const songID= +request.params.id;
-        console.log(`song id${songID} was deleted`);
-        return response.status(204).json(await deleteTask(songID))
+        const taskID= +request.params.id;
+        console.log(`task id${taskID} was deleted`);
+        return response.status(204).json(await deleteTask(taskID))
+    }
+  )
+  taskRouter.post(
+    "/updateTask/:id",
+    async(request:Request,response:Response,next:NextFunction)=>{
+      const updatedTask=request.body;
+      console.log(updatedTask);
+      return response.status(200).json(
+      await updateTask(updatedTask))
+    }
+  )
+  taskRouter.get(
+    "/getTaskById/:id",
+    async(request:Request,response:Response,next:NextFunction)=>{
+      const taskID= +request.params.id;
+      console.log(`got task ${taskID} for you king`)
+      return response.status(200).json(await getTaskById(taskID))
     }
   )
 export default taskRouter;

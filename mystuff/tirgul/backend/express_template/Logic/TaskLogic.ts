@@ -26,4 +26,23 @@ const deleteTask =async(id:Number)=>{
     `
     dal_mysql.execute(SQLcmd);
 }
-export {getAllTasks,addNewTask,deleteTask}
+const getTaskById=async(id:number)=>{
+    const SQLcmd=`
+    SELECT * FROM taskTable WHERE id=${id}
+    `
+    const data=dal_mysql.execute(SQLcmd);
+    return data;
+}
+const updateTask=async (updatedTask:Tasks) => {
+    const SQLcmd=`
+    UPDATE taskBoard.taskTable SET content = 
+    '${updatedTask.content}', type = '${updatedTask.type}' WHERE (id = ${updatedTask.id});
+    `
+    console.log(SQLcmd,updatedTask);
+    const data= await dal_mysql.execute(SQLcmd);
+    return data;
+}
+
+export {getAllTasks,addNewTask,deleteTask,updateTask,getTaskById}
+//UPDATE `taskBoard`.`taskTable` SET `content` = 'i didit ?' WHERE (`id` = '23');
+// UPDATE `taskBoard`.`taskTable` SET `content` = 'updateed', `type` = 'right' WHERE (`id` = '26');

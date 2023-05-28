@@ -28,7 +28,8 @@ function UpdateTaskPage(): JSX.Element {
       }, [oldTask]);
 
     const onsubmit=(data:Tasks)=>{
-        axios.post(`http://localhost:4000/api/v1/taskboard/updateTask/${params.id}`,data)
+        data.id= +params.id;
+        axios.post(`http://localhost:4000/api/v1/taskboard/updateTask/${oldTask?.id}`,data)
         store.dispatch(updateTask(data))
         navigate("/");
     }
