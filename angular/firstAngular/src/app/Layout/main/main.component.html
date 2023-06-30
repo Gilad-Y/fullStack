@@ -1,0 +1,24 @@
+<p>main works!</p>
+<div>{{ showLoved() }}</div>
+<input [type]="type" name="pass" id="id_pass" (input)="onPassUpdate($event)" />
+<br />
+<input type="number" name="age" id="id_age" [(ngModel)]="myAge" />
+<br />
+<h1 *ngIf="myAge > 0; else hideInfo">your age is- {{ myAge }}</h1>
+<br />
+<h1 appUserResult>
+  <ng-template #hideInfo>
+    <div appUserResult>your'e not 0 years old</div></ng-template
+  >
+</h1>
+<br />
+<select (input)="changeColor($event)">
+  <option disabled="select" selected></option>
+  <option>red</option>
+  <option>blue</option>
+  <option>green</option>
+  <option>yellow</option>
+</select>
+<h1 [style.color]="myColor">naruto</h1>
+<h1 appGreen>i am green</h1>
+<h1 appUserResult>i am black and whiteeeee</h1>
