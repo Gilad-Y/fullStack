@@ -13,7 +13,7 @@
 </h1>
 <br />
 <select (input)="changeColor($event)">
-  <option disabled="select" selected></option>
+  <option disabled="select" selected>black</option>
   <option>red</option>
   <option>blue</option>
   <option>green</option>
@@ -22,3 +22,14 @@
 <h1 [style.color]="myColor">naruto</h1>
 <h1 appGreen>i am green</h1>
 <h1 appUserResult>i am black and whiteeeee</h1>
+<h1 [ngStyle]="{ color: styleColor }">i will switch colors with ngstyle</h1>
+<button (click)="switchColor()">i will toggle the color</button>
+<h1 [ngClass]="{ red_box: color, cyan_box: !color }">
+  {{ time }} with ngclass
+</h1>
+<div *ngFor="let item of naruto; let i = index">{{ i + 1 }}-{{ item }}</div>
+<h1 appBetter>hello from host listener</h1>
+<h1 appLazy>lazy host listener</h1>
+<input type="text" [(ngModel)]="inputVal" />
+<button (click)="addName()">add</button>
+<div class="res" *ngFor="let item of name">{{ item }}</div>

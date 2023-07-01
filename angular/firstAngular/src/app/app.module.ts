@@ -10,6 +10,8 @@ import { MenuComponent } from './Layout/menu/menu.component';
 import { FormsModule } from '@angular/forms';
 import { GreenDirective } from './dir/green.directive';
 import { UserResultDirective } from './dir/user-result.directive';
+import { BetterDirective } from './dir/better.directive';
+import { LazyDirective } from './dir/lazy.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,9 @@ import { UserResultDirective } from './dir/user-result.directive';
     MainComponent,
     MenuComponent,
     GreenDirective,
-    UserResultDirective
+    UserResultDirective,
+    BetterDirective,
+    LazyDirective
   ],
   imports: [
     BrowserModule,

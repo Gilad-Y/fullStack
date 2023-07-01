@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NamesService } from 'src/app/service/names.service';
 
 @Component({
   selector: 'app-main',
@@ -13,6 +14,15 @@ export class MainComponent {
   myAge=0;
   myColor="black";
   showData=false;
+  color=false;
+  styleColor='black';
+  time=new Date().toLocaleTimeString()
+  naruto=['naruto','sasuke','jiraya','itachi'];
+  inputVal=""
+  name=["hello"];
+  constructor(private names:NamesService){
+    this.name=names.getNames()
+  }
   showLoved(){
     return this.daddy1+' and '+this.daddy2;
   }
@@ -23,5 +33,17 @@ export class MainComponent {
   changeColor(event: any){
     console.log(event.target.value);
     this.myColor=event.target.value;
+  }
+  switchColor(){
+    this.color=!this.color;
+    this.styleColor=(this.color)?'yellow':'black'
+  }
+  clock=setInterval(()=>{
+    // console.log(new Date().toLocaleTimeString())
+    this.time=new Date().toLocaleTimeString()
+  },1000)
+  addName(){
+    this.names.addName(this.inputVal)
+    this.inputVal=""
   }
 }
