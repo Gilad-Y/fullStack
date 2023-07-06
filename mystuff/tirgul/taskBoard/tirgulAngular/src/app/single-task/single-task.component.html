@@ -1,0 +1,24 @@
+<div class="singleTask box" style="display: flex">
+  <br />
+  <div
+    class="taskInfo"
+    *ngFor="let item of tasksData"
+    style="
+      border: 1px solid black;
+      width: 300px;
+      margin: auto;
+      height: 200px;
+      background-color: azure;
+    "
+  >
+    <!-- {{ props.content }} -->
+    {{ item.content }}
+    <br />
+    <hr />
+    <div class="{type}">
+      <!-- {{ props.type }} -->
+      {{ item.type }}
+    </div>
+    <br />
+  </div>
+</div>

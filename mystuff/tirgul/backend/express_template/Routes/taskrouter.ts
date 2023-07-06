@@ -14,6 +14,7 @@ taskRouter.get(
     async (request:Request,response:Response,next:NextFunction)=>{
         const newTask=request.body;
         console.log(newTask)
+        console.log("hello")
         const res =await addNewTask(newTask);
         return response.status(201).json(`id: ${res}`)
     }
