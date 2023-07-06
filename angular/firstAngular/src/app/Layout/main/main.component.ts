@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BirthdayService } from 'src/app/service/birthday.service';
 import { NamesService } from 'src/app/service/names.service';
 
 @Component({
@@ -20,8 +21,10 @@ export class MainComponent {
   naruto=['naruto','sasuke','jiraya','itachi'];
   inputVal=""
   name=["hello"];
-  constructor(private names:NamesService){
+  birthdayData:any=[];
+  constructor(private names:NamesService, private birthday:BirthdayService){
     this.name=names.getNames()
+    this.birthdayData=birthday.getBirthday()
   }
   showLoved(){
     return this.daddy1+' and '+this.daddy2;

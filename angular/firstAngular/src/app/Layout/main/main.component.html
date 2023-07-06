@@ -27,9 +27,18 @@
 <h1 [ngClass]="{ red_box: color, cyan_box: !color }">
   {{ time }} with ngclass
 </h1>
-<div *ngFor="let item of naruto; let i = index">{{ i + 1 }}-{{ item }}</div>
+<!-- <div *ngFor="let item of naruto; let i = index">{{ i + 1 }}-{{ item }}</div>
 <h1 appBetter>hello from host listener</h1>
 <h1 appLazy>lazy host listener</h1>
 <input type="text" [(ngModel)]="inputVal" />
 <button (click)="addName()">add</button>
-<div class="res" *ngFor="let item of name">{{ item }}</div>
+<div class="res" *ngFor="let item of name">{{ item }}</div> -->
+<div
+  *ngFor="let item of birthdayData"
+  [ngStyle]="{ border: '1px solid black' }"
+>
+  <div>{{ item.img }}</div>
+  <div>{{ item.name | uppercase }}</div>
+  <div>{{ item.age }}</div>
+  <div>{{ item.birthday | date }}</div>
+</div>
