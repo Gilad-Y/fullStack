@@ -1,0 +1,20 @@
+ .singleTask {
+      display: flex;
+      
+    }
+
+    .taskInfo {
+      
+      border: 1px solid black;
+      width: 300px;
+      margin: auto;
+      height: 250px;
+      background-color: azure;
+      position: relative;
+    }
+    button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+}

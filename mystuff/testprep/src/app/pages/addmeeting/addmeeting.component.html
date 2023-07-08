@@ -1,0 +1,29 @@
+<div style="margin-top: 100px; text-align: center">
+  <h1>add new meeting</h1>
+  <select id="select" [(ngModel)]="newMeeting.dev_teamCode" required>
+    <option selected disabled>choose team</option>
+    <option *ngFor="let item of teamsData" [value]="item.teamCode">
+      {{ item.teamName }}
+    </option>
+  </select>
+  <br />
+  <input type="date" [(ngModel)]="newMeeting.startingTime" required />
+  <br />
+  <input type="date" [(ngModel)]="newMeeting.endingTime" required />
+  <br />
+  <input
+    type="text"
+    placeholder="enter description"
+    [(ngModel)]="newMeeting.description"
+    required
+  />
+  <br />
+  <input
+    type="text"
+    placeholder="meeting room"
+    [(ngModel)]="newMeeting.meetingRoom"
+    required
+  />
+  <br />
+  <button (click)="addMeeting()">submit</button>
+</div>

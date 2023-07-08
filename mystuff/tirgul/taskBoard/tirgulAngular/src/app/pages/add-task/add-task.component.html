@@ -1,0 +1,11 @@
+<div>add new task</div>
+<textarea placeholder="task content" [(ngModel)]="task.content"> </textarea>
+<br />
+<select [(ngModel)]="task.type">
+  <option [value]="null" disabled selected>select type</option>
+  <option value="urgent">urgent</option>
+  <option value="important">important</option>
+  <option value="negligible">negligible</option>
+</select>
+
+<button (click)="addTask()">sumbit</button>

@@ -1,0 +1,14 @@
+<div class="singleTask box" style="display: flex">
+  <br />
+  <div class="taskInfo" *ngFor="let item of tasksData">
+    <button class="btn btn-close" (click)="removeTask(item.id)"></button>
+    <br />
+    {{ item.content }}
+    <br />
+    <hr />
+    <div class="{type}">
+      {{ item.type }}
+    </div>
+    <br />
+  </div>
+</div>
