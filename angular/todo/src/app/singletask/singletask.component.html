@@ -1,0 +1,15 @@
+<ol>
+  <li class="singleTask" *ngFor="let item of listData">
+    <span
+      [ngStyle]="{ 'text-decoration': item.checked ? 'line-through' : 'none' }"
+      >{{ item.content }}</span
+    >
+    <input
+      type="checkbox"
+      (change)="checkBoxChange(item)"
+      [checked]="item.checked"
+    />
+    <hr />
+  </li>
+</ol>
+<button class="btn btn-danger" (click)="removeTasks()">delete</button>

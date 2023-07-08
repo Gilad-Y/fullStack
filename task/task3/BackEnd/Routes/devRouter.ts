@@ -28,6 +28,7 @@ router.post(
   "/addMeeting",
   async (request: Request, response: Response, next: NextFunction) => {
     const newMeeting=request.body
+    console.log(newMeeting,"i got this?")
     response.status(200).json(await addMeeting(newMeeting));
   }
 );

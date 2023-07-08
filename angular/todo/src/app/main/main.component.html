@@ -1,0 +1,29 @@
+<h1 style="text-align: center">todo List</h1>
+<div
+  class="input-group mb-3"
+  style="
+    width: 400px;
+    margin: auto;
+    margin-top: 100px;
+    border: 1px solid black;
+    border-radius: 6px;
+  "
+>
+  <div class="form-floating">
+    <input
+      type="text"
+      class="form-control"
+      id="floatingInputGroup1"
+      placeholder="Username"
+      [(ngModel)]="newTask.content"
+    />
+    <label for="floatingInputGroup1">task</label>
+  </div>
+  <button class="btn btn-info" (click)="addTask()">add task</button>
+</div>
+<div
+  class="taskList"
+  style="border: 1px solid black; width: 700px; margin: auto"
+>
+  <app-singletask [listData]="listData"></app-singletask>
+</div>

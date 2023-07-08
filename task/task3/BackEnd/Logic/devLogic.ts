@@ -18,6 +18,7 @@ const addMeeting=async(newMeeting:teamMeeting)=>{
     if(newMeeting.dev_teamCode<=0){
         return("choose team")
     }else{
+        // console.log(newMeeting);
     const SQLcmd=`
     INSERT INTO dev_meeting 
     (dev_teamCode,startingTime, endingTime, description, meetingRoom) VALUES 

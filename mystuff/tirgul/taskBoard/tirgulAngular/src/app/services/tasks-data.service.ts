@@ -6,12 +6,12 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class TasksDataService {
-data:any;
+data:any[]=[];
 tasksUrl="http://localhost:4000/api/v1/taskboard/getAllTasks"
 addUrl="http://localhost:4000/api/v1/taskboard/addNewTask"
   constructor(private http:HttpClient,private router:Router) { }
   getData(){
-    return this.data=this.http.get(this.tasksUrl);
+    return this.data=this.http.get(this.tasksUrl) as any;
   }
   addTask(data: any) {
     console.log(data);
@@ -21,5 +21,11 @@ addUrl="http://localhost:4000/api/v1/taskboard/addNewTask"
     }, error => {
       console.error('Error adding task:', error);
     });
+  }
+  removeTask(id:number){
+    return this.http.delete(`http://localhost:4000/api/v1/taskboard/deleteTask/${id}`).subscribe(response=>{
+      console.log("this task removed",id);
+      this.data=this.data.filter((item:any)=>item.id!==id)
+    },err=> console.log(err))
   }
 }

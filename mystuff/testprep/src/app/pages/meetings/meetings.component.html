@@ -1,0 +1,46 @@
+<div class="main">
+  <div>
+    <a routerLink="">home</a>
+    <br />
+    <a routerLink="addMeeting">add meeting</a>
+  </div>
+  <select id="select" (input)="showMeetings($event)">
+    <option selected disabled>choose team</option>
+    <option *ngFor="let item of teamsData" [value]="item.teamCode">
+      {{ item.teamName }}
+    </option>
+  </select>
+  <table></table>
+  <table *ngIf="selectedTeam != ''">
+    <thead>
+      <th>meeting code</th>
+      <th>group code</th>
+      <th>starting time</th>
+      <th>ending time</th>
+      <th>description</th>
+      <th>meeting room</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of meetingsData">
+        <td *ngIf="item.dev_teamCode == selectedTeam">
+          {{ item.meetingCode }}
+        </td>
+        <td *ngIf="item.dev_teamCode == selectedTeam">
+          {{ item.dev_teamCode }}
+        </td>
+        <td *ngIf="item.dev_teamCode == selectedTeam">
+          {{ item.startingTime }}
+        </td>
+        <td *ngIf="item.dev_teamCode == selectedTeam">
+          {{ item.endingTime }}
+        </td>
+        <td *ngIf="item.dev_teamCode == selectedTeam">
+          {{ item.description }}
+        </td>
+        <td *ngIf="item.dev_teamCode == selectedTeam">
+          {{ item.meetingRoom }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
