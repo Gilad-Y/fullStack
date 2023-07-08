@@ -6,6 +6,9 @@ import { Tasks } from "../../modal/taskModal";
 import SingleTask from "./singleTask/singleTask";
 function TaskBoard(): JSX.Element {
     const [refresh,setRefresh]=useState(false);
+
+
+
     useEffect(()=>{
         if (store.getState().task.tasks.length<1){
             // if(!localStorage.getItem("tasks")){
