@@ -1,5 +1,18 @@
 <h1 style="text-align: center">add Action!</h1>
 <br />
+<div [innerHTML]="alert" style="width: 300px; margin: auto">
+  <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields
+    below.
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div> -->
+</div>
+<br />
 <div class="container" style="text-align: center">
   <div class="form-floating" style="width: 300px; margin: auto">
     <input
@@ -16,59 +29,73 @@
     <option selected disabled>choose action</option>
     <option>deposit</option>
     <option>withdraw</option>
-    <option>get a loan</option>
+    <option>loan</option>
   </select>
   <br />
-  <div *ngIf="action != 'get a loan'; else loan">
-    <div
-      class="input-group mb-3"
-      style="width: 300px; margin: auto; margin-top: 100px"
-    >
-      <div class="form-floating">
-        <input
-          type="number"
-          class="form-control"
-          id="floatingInputGroup1"
-          placeholder="amount"
-          [(ngModel)]="amount"
-        />
-        <label for="floatingInputGroup1">amount</label>
-      </div>
-      <button class="btn-success btn">save</button>
-    </div>
-  </div>
-  <ng-template #loan>
-    <div class="form-floating" style="width: 300px; margin: auto">
-      <input
-        type="number"
-        class="form-control"
-        id="floatingInputGroup1"
-        placeholder="amount"
-        [(ngModel)]="amount"
-      />
-      <label for="floatingInputGroup1">amount</label>
-    </div>
-    <div class="form-floating" style="width: 300px; margin: auto">
-      <input
-        type="number"
-        class="form-control"
-        id="floatingInputGroup1"
-        placeholder="payments"
-        [(ngModel)]="payments"
-      />
-      <label for="floatingInputGroup1">payments</label>
-    </div>
-    <div class="form-floating" style="width: 300px; margin: auto">
-      <input
-        type="number"
-        class="form-control"
-        id="floatingInputGroup1"
-        placeholder="interest"
-        [(ngModel)]="interest"
-      />
-      <label for="floatingInputGroup1">interest</label>
-    </div>
-  </ng-template>
+  <ng-container [ngSwitch]="actionType">
+    <ng-container *ngSwitchCase="'loan'">
+      <form (ngSubmit)="addLoan()">
+        <div class="input-group mb-3">
+          <div class="form-floating" style="width: 200px; margin: auto">
+            <input
+              type="number"
+              class="form-control"
+              id="floatingInputGroup1"
+              placeholder="amount"
+              [(ngModel)]="amount"
+              name="amount"
+              required
+            />
+            <label for="floatingInputGroup1">Amount</label>
+          </div>
+          <div class="form-floating" style="width: 200px; margin: auto">
+            <input
+              type="number"
+              class="form-control"
+              id="floatingInputGroup2"
+              placeholder="payments"
+              [(ngModel)]="payments"
+              name="payments"
+            />
+            <label for="floatingInputGroup2">Payments</label>
+          </div>
+          <div class="form-floating" style="width: 100px; margin: auto">
+            <input
+              type="number"
+              class="form-control"
+              id="floatingInputGroup3"
+              placeholder="interest"
+              [(ngModel)]="interest"
+              name="interest"
+            />
+            <label for="floatingInputGroup3">Interest</label>
+          </div>
+          <button type="submit" class="btn btn-success">Save</button>
+        </div>
+      </form>
+    </ng-container>
+    <ng-container *ngSwitchDefault>
+      <form (ngSubmit)="addDepositWithdraw()">
+        <div class="input-group mb-3" style="width: 200px; margin: auto">
+          <div class="form-floating">
+            <input
+              type="number"
+              class="form-control"
+              id="floatingInputGroup1"
+              placeholder="amount"
+              [(ngModel)]="amount"
+              name="amount"
+              required
+            />
+            <label for="floatingInputGroup1">Amount</label>
+          </div>
+          <button type="submit" class="btn btn-success">Save</button>
+        </div>
+      </form>
+    </ng-container>
+    <ng-container *ngSwitchCase="''"></ng-container>
+  </ng-container>
+
   <br />
   <a href="/" class="btn btn-primary" tabindex="-1" role="button"
     >get account actions</a

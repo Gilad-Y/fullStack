@@ -9,6 +9,8 @@ export class AccountsService {
   constructor(private http:HttpClient) { }
   getAccountInfo(number:string){
    return this.data=this.http.get(`http://localhost:4000/api/v1/account/getActions/${number}`)
-    //  this.data
+  }
+  addAction(action:any){
+    return this.http.post("http://localhost:4000/api/v1/account/addAction",action)
   }
 }

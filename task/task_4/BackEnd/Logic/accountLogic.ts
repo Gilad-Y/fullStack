@@ -14,6 +14,7 @@ const SQLcmd=`
 INSERT INTO AccountOperations (accountNumber, Type, data) VALUES ('${action.accountNumber}', '${action.Type}', '${action.data}');
 `;
 const data= await dal_mysql.execute(SQLcmd);
-return data.insertId;
+// return data.insertId;
+return data;
 }
 export {getAccountData,addAction}

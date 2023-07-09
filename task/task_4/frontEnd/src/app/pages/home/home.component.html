@@ -1,5 +1,6 @@
 <div class="container" style="text-align: center">
   home
+  <div [innerHTML]="alert"></div>
   <div
     class="input-group mb-3"
     style="width: 300px; margin: auto; margin-top: 100px"
@@ -14,7 +15,7 @@
       />
       <label for="floatingInputGroup1">account number</label>
     </div>
-    <button class="btn-info btn" (click)="getData()">add</button>
+    <button class="btn-info btn" (click)="getData()">view</button>
   </div>
   <app-single-action [data]="data"></app-single-action>
 </div>

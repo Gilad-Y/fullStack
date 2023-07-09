@@ -1,10 +1,10 @@
-<div *ngIf="data.length > 1">
+<div *ngIf="data.length > 0">
   {{ data[0].accountNumber }} Actions
   <div
     *ngFor="let item of data"
     style="
       border: 1px solid black;
-      width: 200px;
+      width: 300px;
       margin: auto;
       border-radius: 6px;
     "
@@ -13,6 +13,7 @@
     {{ item.data }}
   </div>
 </div>
+<br />
 <a href="/addAction" class="btn btn-primary" tabindex="-1" role="button"
   >add action</a
 >
