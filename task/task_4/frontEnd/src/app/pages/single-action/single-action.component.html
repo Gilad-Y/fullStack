@@ -1,0 +1,18 @@
+<div *ngIf="data.length > 1">
+  {{ data[0].accountNumber }} Actions
+  <div
+    *ngFor="let item of data"
+    style="
+      border: 1px solid black;
+      width: 200px;
+      margin: auto;
+      border-radius: 6px;
+    "
+  >
+    {{ item.Type }}
+    {{ item.data }}
+  </div>
+</div>
+<a href="/addAction" class="btn btn-primary" tabindex="-1" role="button"
+  >add action</a
+>

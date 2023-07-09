@@ -1,0 +1,20 @@
+<div class="container" style="text-align: center">
+  home
+  <div
+    class="input-group mb-3"
+    style="width: 300px; margin: auto; margin-top: 100px"
+  >
+    <div class="form-floating">
+      <input
+        type="text"
+        class="form-control"
+        id="floatingInputGroup1"
+        placeholder="account number"
+        [(ngModel)]="accountNumber"
+      />
+      <label for="floatingInputGroup1">account number</label>
+    </div>
+    <button class="btn-info btn" (click)="getData()">add</button>
+  </div>
+  <app-single-action [data]="data"></app-single-action>
+</div>

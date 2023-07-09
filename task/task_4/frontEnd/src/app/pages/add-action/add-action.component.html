@@ -1,0 +1,76 @@
+<h1 style="text-align: center">add Action!</h1>
+<br />
+<div class="container" style="text-align: center">
+  <div class="form-floating" style="width: 300px; margin: auto">
+    <input
+      type="text"
+      class="form-control"
+      id="floatingInputGroup1"
+      placeholder="account number"
+      [(ngModel)]="accountNumber"
+      required
+    />
+    <label for="floatingInputGroup1">account number</label>
+  </div>
+  <select (input)="chooseAction($event)">
+    <option selected disabled>choose action</option>
+    <option>deposit</option>
+    <option>withdraw</option>
+    <option>get a loan</option>
+  </select>
+  <br />
+  <div *ngIf="action != 'get a loan'; else loan">
+    <div
+      class="input-group mb-3"
+      style="width: 300px; margin: auto; margin-top: 100px"
+    >
+      <div class="form-floating">
+        <input
+          type="number"
+          class="form-control"
+          id="floatingInputGroup1"
+          placeholder="amount"
+          [(ngModel)]="amount"
+        />
+        <label for="floatingInputGroup1">amount</label>
+      </div>
+      <button class="btn-success btn">save</button>
+    </div>
+  </div>
+  <ng-template #loan>
+    <div class="form-floating" style="width: 300px; margin: auto">
+      <input
+        type="number"
+        class="form-control"
+        id="floatingInputGroup1"
+        placeholder="amount"
+        [(ngModel)]="amount"
+      />
+      <label for="floatingInputGroup1">amount</label>
+    </div>
+    <div class="form-floating" style="width: 300px; margin: auto">
+      <input
+        type="number"
+        class="form-control"
+        id="floatingInputGroup1"
+        placeholder="payments"
+        [(ngModel)]="payments"
+      />
+      <label for="floatingInputGroup1">payments</label>
+    </div>
+    <div class="form-floating" style="width: 300px; margin: auto">
+      <input
+        type="number"
+        class="form-control"
+        id="floatingInputGroup1"
+        placeholder="interest"
+        [(ngModel)]="interest"
+      />
+      <label for="floatingInputGroup1">interest</label>
+    </div>
+  </ng-template>
+  <br />
+  <a href="/" class="btn btn-primary" tabindex="-1" role="button"
+    >get account actions</a
+  >
+</div>
