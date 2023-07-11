@@ -1,9 +1,10 @@
 <?php
-for ($i = 1; $i <= 10; $i++) {
-    $res = "";
-    for ($j = 1; $j <= 10; $j++) {
-        $res += $i * $j;
+for ($row = 1; $row <= 10; $row++) {
+    for ($col = 1; $col <= 10; $col++) {
+        $result = $col * $row . "\t";
+        echo nl2br($result, false);
     }
-    echo "$res";
+    echo nl2br("\n", false);
+    
 }
 ?>
